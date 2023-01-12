@@ -7,7 +7,7 @@ from celery.schedules import crontab
 def send_mail(sub_username, sub_useremail, html_content):
     msg = EmailMultiAlternatives(
         subject=f'Здравствуйте, {sub_username}. Новая статья в вашем разделе!',
-        from_email='d3spector@yandex.ru',
+        from_email='rusinov4liaksandr@yandex.ru',
         to=[sub_useremail]
     )
 
@@ -21,7 +21,7 @@ def send_mail_weekly(sub_username, sub_useremail, html_content):
 
     msg = EmailMultiAlternatives(
         subject=f'Здравствуйте, {sub_username}, новые статьи за прошлую неделю',
-        from_email='d3spector@yandex.ru',
+        from_email='rusinov4liaksandr@yandex.ru',
         to=[sub_useremail]
     )
 
